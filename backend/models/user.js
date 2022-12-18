@@ -12,5 +12,6 @@ const userSchema = mongoose.Schema({
 
 //Pour empêcher l'enregistrement de 2 adresses mail similaires dans la database 
 userSchema.plugin(uniqueValidator)
+
 //Module exportation 
 module.exports = mongoose.model("user", userSchema)

@@ -1,19 +1,19 @@
 //Import d'Express
 const express = require("express");
 
-//Import FicheSauce controller
+//Import du controller FicheSauce
 const ficheSauce = require("../controllers/FicheSauce")
 
-//Import Like controller
+//Import du controller Like 
 const like = require("../controllers/like")
 
 //Importation du middleware multer.js 
 const multer = require("../middlewares/multer")
 
-
+//Import du middleware d'authentification
 const authentification = require('../middlewares/authentification')
 
-//La fonction Router du framework Express
+//Nous stockons la fonction Router du framework Express dans la const router
 const router = express.Router();
 
 //Les Routes
