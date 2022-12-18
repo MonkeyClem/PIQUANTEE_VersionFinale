@@ -10,10 +10,11 @@ const like = require("../controllers/like")
 //Importation du middleware multer.js 
 const multer = require("../middlewares/multer")
 
-//La fonction Router du framework d'Express
-const router = express.Router();
+
 const authentification = require('../middlewares/authentification')
-const authentificationGet = require ('../middlewares/authentificationGet')
+
+//La fonction Router du framework Express
+const router = express.Router();
 
 //Les Routes
 router.post('/sauces/', authentification, multer, ficheSauce.createFicheSauce);
