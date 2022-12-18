@@ -18,8 +18,6 @@ const mongoose = require('mongoose');
 //Lorsque une requête est envoyée, le module CORS est systématiquement utilisé. 
 app.use(cors());
 
-
-
 //Connection to MongoDB Database 
 mongoose.connect('mongodb+srv://clement:clem@piquantee.nl0h7sg.mongodb.net/?retryWrites=true&w=majority',
   { useNewUrlParser: true,
