@@ -14,6 +14,9 @@ passwordSchema
 .has().not().spaces()                           // Should not have spaces
 .is().not().oneOf(['Passw0rd', 'Password123']); // Blacklist these values
 
+
+//Si le schéma requis pour le MDP est respecté, alors nous passons au middleware suivant
+//Si ce n'est pas le cas, le reponse 400 nous est retourné. 
 module.exports = (req, res, next) => {
     if(passwordSchema.validate(req.body.password)){
         next()
