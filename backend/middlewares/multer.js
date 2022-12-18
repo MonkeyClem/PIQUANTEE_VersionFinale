@@ -1,5 +1,4 @@
 //MULTER : Pour gérer les requête HTTP avec envoie de fichier 
-
 //IMPORT OF : Multer
 const multer = require ('multer')
 
@@ -11,7 +10,6 @@ const MIME_TYPES = {
     "image/png" : "png"
 }
 
-console.log(MIME_TYPES)
 
 //La destination du fichier (répertoire) et génerer un nom de fichier unique 
 const storage = multer.diskStorage({
@@ -28,9 +26,7 @@ const storage = multer.diskStorage({
     }
 }
 )
-console.log("MULTER CONST STORAGE")
-console.log(storage)
 
-//Exportation 
+//Exportation du module
 module.exports = multer({storage}).single('image')
 
